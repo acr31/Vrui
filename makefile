@@ -95,12 +95,12 @@ include $(VRUI_MAKEDIR)/Packages.System
 # Vrui package as contributed source.)
 OPENVR_BASEDIR = $(PWD)/Contributed/OpenVR
 
-ifneq ($(strip $(OPENVR_BASEDIR)),)
-  SYSTEM_HAVE_OPENVR = 1
+#ifneq ($(strip $(OPENVR_BASEDIR)),)
+#  SYSTEM_HAVE_OPENVR = 1
   
   # Root directory of the SteamVR run-time. The following attempts to
   # find SteamVR inside the installing user's home directory:
-  STEAMVRDIR = $(shell find $(HOME) -name SteamVR | grep common/SteamVR)
+#  STEAMVRDIR = $(shell find $(HOME) -name SteamVR | grep common/SteamVR)
   
   # If the above fails, or SteamVR's run-time is installed outside the
   # installing user's home directory, enter the correct path here:
@@ -109,13 +109,13 @@ ifneq ($(strip $(OPENVR_BASEDIR)),)
   # The following should not need to be changed if STEAMVRDIR is set
   # correctly.
   # Root directory containing both Steam and SteamVR run-times:
-  STEAMDIR = $(realpath $(STEAMVRDIR)/../../../..)
+#  STEAMDIR = $(realpath $(STEAMVRDIR)/../../../..)
   # Steam run-time root directories:
-  STEAMRUNTIMEDIR1 = $(shell find $(STEAMDIR) -name x86_64-linux-gnu | grep steam-runtime/amd64/lib/x86_64-linux-gnu)
-  STEAMRUNTIMEDIR2 = $(shell find $(STEAMDIR) -name x86_64-linux-gnu | grep steam-runtime/amd64/usr/lib/x86_64-linux-gnu)
-else
+#  STEAMRUNTIMEDIR1 = $(shell find $(STEAMDIR) -name x86_64-linux-gnu | grep steam-runtime/amd64/lib/x86_64-linux-gnu)
+#  STEAMRUNTIMEDIR2 = $(shell find $(STEAMDIR) -name x86_64-linux-gnu | grep steam-runtime/amd64/usr/lib/x86_64-linux-gnu)
+#else
   SYSTEM_HAVE_OPENVR = 0
-endif
+#endif
 
 ########################################################################
 # Please do not change the following line
