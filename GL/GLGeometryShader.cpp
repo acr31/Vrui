@@ -133,9 +133,9 @@ void GLGeometryShader::linkShader(GLint geometryInputType,GLint geometryOutputTy
 	if(!geometryShaderObjects.empty())
 		{
 		/* Set the input/output parameters: */
-		glProgramParameteriEXT(GLuint(programObject),GL_GEOMETRY_INPUT_TYPE_EXT,geometryInputType);
-		glProgramParameteriEXT(GLuint(programObject),GL_GEOMETRY_OUTPUT_TYPE_EXT,geometryOutputType);
-		glProgramParameteriEXT(GLuint(programObject),GL_GEOMETRY_VERTICES_OUT_EXT,maxNumOutputVertices);
+		  glProgramParameteriEXT(GLuint((size_t)programObject),GL_GEOMETRY_INPUT_TYPE_EXT,geometryInputType);
+		  glProgramParameteriEXT(GLuint((size_t)programObject),GL_GEOMETRY_OUTPUT_TYPE_EXT,geometryOutputType);
+		  glProgramParameteriEXT(GLuint((size_t)programObject),GL_GEOMETRY_VERTICES_OUT_EXT,maxNumOutputVertices);
 		
 		/* Check for errors: */
 		GLenum err=glGetError();
