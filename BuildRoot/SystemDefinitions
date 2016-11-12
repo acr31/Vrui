@@ -232,6 +232,6 @@ endif
 # Create initial values for parameters that can be overriden by project makefiles
 CFLAGS = 
 LINKFLAGS = 
-EXTRACINCLUDEFLAGS = 
+EXTRACINCLUDEFLAGS = -I/opt/X11/include
 EXTRALINKDIRFLAGS = 
 EXTRALINKLIBFLAGS = 
